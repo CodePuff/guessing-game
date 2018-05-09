@@ -1,7 +1,7 @@
 'use strict';
 
 var userPoints = 0;
-//pseudo code below 
+//pseudo code below
 //check if the user's answer is correct
 //what is correct?
 //find out what the answer is
