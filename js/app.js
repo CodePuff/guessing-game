@@ -8,13 +8,16 @@ var userPoints = 0;
 //toLowerCase or toUpperCase
 //use a confirm box?
 
+//greetings
+alert ('Welcome to my guessing game!');
 console.log ('Hello World!');
 
-alert ('Welcome to my guessing game!');
-
+//ask user name
 var user = prompt ('What is your name?');
+console.log = ('The user\'s name is ' + user);
 
-alert ('Hi ' + user + '! I am so glad you want to play my game.');
+//intro to game
+alert ('Hi ' + user + '! There are 5 \'yes\' or \'no\' questions about me.  Can you guess all 5 right? ');
 
 var answer = prompt ('Is Rachel\'s favorite food kimchi?' , 'type yes or no').toLowerCase();
 
