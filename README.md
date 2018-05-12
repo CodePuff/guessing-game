@@ -1,13 +1,15 @@
 
-## guessing-game
+# guessing-game
 Code Fellows 201n11 About Me Lab 2.  
+
+## Purpose
 
 - The assignment will be to create an "About Me" HTML Project using Javascript and CSS.
 
 - Note that as we progress through the week, new user stories will be added to the "About Me" project to guide the development of new features.
 
 
-### User Stories for "About Me" (MVP)
+## User Stories for "About Me" (MVP)
 
 ("MVP" = "Minimum Viable Product" which is the most basic successful functionality of our project. Extensions, added features, and other enhancements fall under the category of "Stretch Goals.")
 
@@ -28,7 +30,7 @@ User stories typically take the form of, "As X, I want Y, so that Z" but do not 
 - As a developer, I want to be able to debug my code by using well structured console messages.
 - As a developer, I want to manage my code through an online version control system, so I have the ability to work with others, manage my revisions, and keep a thorough record of my progress.
 
-### Technical Requirements for "About Me"
+## Technical Requirements for "About Me"
 
 - Follow the instructions in the adjacent ["Setting Up a New Code 201 Project"](./setting-up-a-new-project.md) document
 - HTML, CSS, and JavaScript must be cleanly written with correct indentation and syntax. Look at examples online and in your textbook. Note that your JS must pass the rules in the linter that we installed.
@@ -42,8 +44,13 @@ User stories typically take the form of, "As X, I want Y, so that Z" but do not 
 ### Build status
 
 -050818 Version 1.0.0 
-  -Updated scaffolding directory.   
- 
+  -Updated scaffolding directory. 
+
+### Tech/Framework 
+
+- Visual Studio Code (Version 1.23.0) 
+- HTML5
+
 
 ### Features
 
@@ -60,7 +67,13 @@ What makes the project stand out?
 -.gitignore updated by Shamarke
 -reset.css provided by http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
 
-### License
-A short snippet describing the license (MIT, Apache etc)
+### Helpful Links
+
+[VS Code](www.visualstudio.com) , 
+[Code Fellows](https://www.codefellows.org/)
+
+
+### License/Author
 MIT © [CodePuff](2018)
+The author of this page is HRHayden, an introductory student at Code Fellows Coding Academy, Seattle, WA.
 
