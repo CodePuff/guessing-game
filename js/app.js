@@ -6,7 +6,7 @@ var userPoints = 0;
 //check if the user's answer is correct
 //what is correct?
 //find out what the answer is
-//toLowerCase or toUpperCase
+//toLowerCase or toLowerCase
 //use a confirm box?
 
 //greetings / intro to game
@@ -17,86 +17,73 @@ console.log ('Hello World!');
 var user = prompt ('What is your name?');
 console.log = ('The user\'s name is ' + user);
 
-// first question using if/else
+//first question using if/else
 
-var guessHometown = prompt('Was I born in Germany?');
-var lowerCaseGuessHometown = guessHometown.toLowerCase();
+var guessHometown = prompt('Was I born in Germany?').toLowerCase();
 
-if (lowerCaseGuessHometown === 'no' || lowerCaseGuessHometown === 'n') {
+if (guessHometown === 'no' || guessHometown === 'n') {
   alert('Richtig! That\'s correct in German! I was born in Seoul, Korea.');
   console.log('Answer is correct. Tallying score variable.');
   userPoints++;
 
-} else if (lowerCaseGuessHometown === 'yes' || lowerCaseGuessHometown === 'y') {
-  alert('Falsch! That\'s incorrect in German! I was born in Seoul, Korea.');
-  console.log('Answer is incorrect! Your score remains the same.');
-
 } else {
-  alert('Your input was not valid. Please try again.');
-  console.log('questionDone remains false; therefore, the while loop will repeat the question');
+  alert('Falsch! That is incorrect in German! I was born in Seoul, Korea.');
+  console.log('Answer is incorrect! Your score remains the same.');
 }
-  
-console.log('Current score: ' + userPoints);
+
+// console.log('Current score: ' + userPoints);
+
 
 // second question using if else
 
-var guessDiving = prompt('Did I go snuba diving?');
-var lowerCaseGuessDiving = guessDiving.toLowerCase();
+var guessDiving = prompt('Did I go snuba diving?').toLowerCase();
 
-if (lowerCaseGuessDiving === 'yes' || lowerCaseGuessDiving === 'y') {
+if (guessDiving === 'yes' || guessDiving === 'y') {
   alert('Pololei! That\'s correct in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
   console.log('Answer is correct. Tallying score variable.');
   userPoints++;
 
-} else if (lowerCaseGuessDiving === 'no' || lowerCaseGuessDiving === 'n') {
+} else  {
   alert('Pololei Ole! That\'s incorrect in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
   console.log('Answer is incorrect! Score remains the same.');
 
-} else {
-  alert('Your input was not valid. Please try again.');
-}
+} 
     
 console.log('Current score: ' + userPoints);
 
 // third question using if/else
       
-var guessPetDog = prompt('Do I have a pet dog?');
-var lowerCaseGuessPetDog = guessPetDog.toLowerCase();
+var guessPetDog = prompt('Do I have a pet dog?').toLowerCase();
 
-if (lowerCaseGuessPetDog === 'yes' || guessPetDog === 'y') {
+if (guessPetDog === 'yes' || guessPetDog === 'y') {
   alert('Grrrrrr! That\'s incorrect in Dog! I don\'t have a pet dog, yet.');
   console.log('Answer is incorrect! Score remains the same.');
 
 
-} else if (lowerCaseGuessPetDog === 'no' || lowerCaseGuessPetDog === 'n') {
+} else  {
   alert('WoofWoof! That\'s correct in Dog! I don\'t have a pet dog, yet.');
   console.log('Answer is correct. Tallying score variable.');
   userPoints++;
 
-} else {
-  alert('That is not a valid input. Please try again.');
+
 }
       
-console.log('Current score: ' + userPoints);
-
-      
+console.log('Current score: ' + userPoints)
 
 // fourth question using if/else
 
-var guessCatAllergy = prompt('Am I allergic to cats?');
-var lowerCaseGuessCatAllergy = guessCatAllergy.toLowerCase();
+var guessCatAllergy = prompt('Am I allergic to cats?').toLowerCase();
 
-if (lowerCaseGuessCatAllergy === 'yes' || lowerCaseGuessCatAllergy === 'y') {
+if (guessCatAllergy === 'yes' || guessCatAllergy === 'y') {
   alert(' HiSs HiSs! That\'s incorrect in Feline. I love Garfield!');
   console.log('Answer is incorrect! Score remains the same.');
 
-} else if (lowerCaseGuessCatAllergy === 'no' || lowerCaseGuessCatAllergy === 'n') {
+} else  {
   alert('Purrrrrrrrrr! That\'s correct in Feline. I love Garfield!');
   console.log('Answer is correct. Tallying score variable..');
   userPoints++;
 
-} else {
-  alert('That is not a valid input. Please try again.');
+
 }
         
 console.log('Current score: ' + userPoints);
@@ -104,23 +91,21 @@ console.log('Current score: ' + userPoints);
 // fifth question using if/else
 
 
-var guessChickenPox = prompt('Did I get chicken pox twice in one year?');
-var lowerCaseGuessChickenPox = guessChickenPox.toLowerCase();
+var guessChickenPox = prompt('Did I get chicken pox twice in one year?').toLowerCase();
 
-if (lowerCaseGuessChickenPox === 'yes' || lowerCaseGuessChickenPox === 'y') {
+if (guessChickenPox === 'yes' || guessChickenPox === 'y') {
   alert('Itchy! Itchy! That is correct! I\'ve had chicken pox twice in elementary school. ');
   console.log('Answer is correct. Tallying score variable.');
   userPoints++;
 
 
-} else if (lowerCaseGuessChickenPox === 'no' || lowerCaseGuessChickenPox === 'n') {
+} else  {
   alert('Pucock! That is incorrect in Chicken! I\'ve had chicken pox twice in elementary school.');
   console.log('Answer is incorrect! Score remains the same.');
 
-} else {
-  alert('That is not a valid input. Please try again.');
+
 }
-          
+
 console.log('Current score: ' + userPoints);
 
 // Tallying total
