@@ -15,7 +15,7 @@ console.log ('Hello World!');
 
 //ask user name
 var user = prompt ('What is your name?');
-console.log = ('The user\'s name is ' + user);
+console.log ('The user\'s name is ' + user);
 
 //first question using if/else
 
