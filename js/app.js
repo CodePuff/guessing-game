@@ -31,7 +31,7 @@ if (guessHometown === 'no' || guessHometown === 'n') {
   console.log('Answer is incorrect! Your score remains the same.');
 }
 
-// console.log('Current score: ' + userPoints);
+console.log('Current score: ' + userPoints);
 
 
 // second question using if else
