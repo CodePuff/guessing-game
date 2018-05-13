@@ -17,20 +17,28 @@ console.log ('Hello World!');
 var user = prompt ('What is your name?');
 console.log ('The user\'s name is ' + user);
 
-//first question using if/else
+//first question using if/else adding while loop
 
-var guessHometown = prompt('Was I born in Germany?').toLowerCase();
+var correctAnswer=false;
+while (correctAnswer===false){
 
-if (guessHometown === 'no' || guessHometown === 'n') {
-  alert('Richtig! That\'s correct in German! I was born in Seoul, Korea.');
-  console.log('Answer is correct. Tallying score variable.');
-  userPoints++;
+  var guessHometown = prompt('Was I born in Germany?').toLowerCase();
 
-} else {
-  alert('Falsch! That is incorrect in German! I was born in Seoul, Korea.');
-  console.log('Answer is incorrect! Your score remains the same.');
+  if (guessHometown === 'no' || guessHometown === 'n') {
+    alert('Richtig! That\'s correct in German! I was born in Seoul, Korea.');
+    console.log('Answer is correct. Tallying score variable.');
+    correctAnswer = true;
+    userPoints++;
+
+  } else if(guessHometown === 'yes' || guessHometown === 'y'){
+    alert('Falsch! That is incorrect in German! I was born in Seoul, Korea.');
+    console.log('Answer is incorrect! Your score remains the same.');
+    correctAnswer = true;
+  }else{
+    alert('Your input was not valid. Please type in the correct reponse');
+    console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
+  }
 }
-
 console.log('Current score: ' + userPoints);
 
 
