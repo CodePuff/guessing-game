@@ -42,7 +42,7 @@ while (correctAnswer===false){
 console.log('Current score: ' + userPoints);
 
 
-// second question using if else
+// second question using if else adding while loop
 correctAnswer = false;
 while (correctAnswer === false) {
 
@@ -68,7 +68,7 @@ while (correctAnswer === false) {
     
 console.log('Current score: ' + userPoints);
 
-// third question using if/else
+// third question using if/else adding while loop
 correctAnswer = false;
 while (correctAnswer === false) {
       
@@ -94,7 +94,7 @@ while (correctAnswer === false) {
     
 console.log('Current score: ' + userPoints);
       
-// fourth question using if/else
+// fourth question using if/else adding while loop
 correctAnswer = false;
 while (correctAnswer === false) {
 
@@ -120,7 +120,7 @@ while (correctAnswer === false) {
         
 console.log('Current score: ' + userPoints);
 
-// fifth question using if/else
+// fifth question using if/else adding while loop
 correctAnswer = false;
 while (correctAnswer === false) {
 
@@ -146,6 +146,43 @@ while (correctAnswer === false) {
 }
 
 console.log('Current score: ' + userPoints);
+
+// added sixth question using if/else/while loop
+
+correctAnswer = false;
+for (var i = 0; i < 4 && (correctAnswer === false); i++) {
+
+  var guessTotalCousins = prompt('How many of my cousins do you think live in Washington state currently? (please enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining for this question.');
+  
+  while (isNaN(guessTotalCousins))
+    guessTotalCousins = prompt ('Invalid input. We will give you a chance to input an integer before docking attempts. How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining for this question.');
+}
+var intGuessTotalCousins = parseInt(guessTotalCousins);
+console.log('User input: ' + guessTotalCousins);
+if (intGuessTotalCousins < 0) {
+  alert('Sorry, but that\'s not how the world works. You can\'t have less than 0 cousins!');
+  console.log('Answer is incorrect. Loop will continue.');
+
+} else if (intGuessTotalCousins === 1) {
+  alert('That is incorrect! Your guess is too low.');
+  console.log('Answer is incorrect. Loop will continue.');
+
+} else if (intGuessTotalCousins > 2) {
+  alert('That is incorrect! Your guess is too high.');
+  console.log('Answer is incorrect. Loop will continue.');
+
+} else if (intGuessTotalCousins === 2) {
+  alert('That is correct! I have 2 (two) cousins living in Washington.');
+  console.log('Answer is correct. Incrementing score variable and exit loop.');
+  correctAnswer = true;
+
+  console.log(correctAnswer);
+  userPoints++;
+}
+
+console.log('Current score: ' + userPoints);
+
+
 
 // Tallying total
 alert('Thank you for visiting my page! Your final score: ' + userPoints + ' See you later!');
