@@ -159,6 +159,7 @@ for (var i = 0; i < 4 && (correctAnswer === false); i++) {
 }
 var intGuessTotalCousins = parseInt(guessTotalCousins);
 console.log('User input: ' + guessTotalCousins);
+
 if (intGuessTotalCousins < 0) {
   alert('Sorry, but that\'s not how the world works. You can\'t have less than 0 cousins!');
   console.log('Answer is incorrect. Loop will continue.');
@@ -181,6 +182,38 @@ if (intGuessTotalCousins < 0) {
 }
 
 console.log('Current score: ' + userPoints);
+
+// added seventh question using if/else/while loop and array
+
+correctAnswer = false;
+var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida", 'Hawaii'];
+
+//creating a new array and then turning each element to lower case.  The lower case names are then pushed into the array.  
+
+var lowerCaseVisitedStates = {};
+  for (i = 0; i < visitedStates.length; i++) {
+  lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
+}
+
+  console.log(lowerCaseVisitedStates);
+  for (var i = 0; i < 6 && (correctAnswer === false); i++) {
+  var guessVisitedState = prompt('Can you guess a state that I have lived in besides Washington and Alaska? You have ' + (6 - i) + ' attempt(s) remaining for this question.');
+  var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
+  console.log(lowerCaseGuessVisitedState);
+  var guessInt = lowerCaseVisitedStates.indexOf(lowerCaseGuessVisitedState);
+  console.log(guessInt);
+  if (guessInt === -1) {
+    alert('That was incorrect. Please try again!"');
+  }
+  else if (guessInt > -1) {
+    alert('That was correct! Possible answers were the following: ' + visitedStates.join(', ') + '.');
+    correctAnswer = true;
+    userPoints++;
+  }
+}
+console.log(userPoints);
+
+
 
 
 
