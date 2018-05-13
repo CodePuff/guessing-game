@@ -43,41 +43,54 @@ console.log('Current score: ' + userPoints);
 
 
 // second question using if else
+correctAnswer = false;
+while (correctAnswer === false) {
 
-var guessDiving = prompt('Did I go snuba diving?').toLowerCase();
+  var guessDiving = prompt('Did I go snuba diving?').toLowerCase();
 
-if (guessDiving === 'yes' || guessDiving === 'y') {
-  alert('Pololei! That\'s correct in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
-  console.log('Answer is correct. Tallying score variable.');
-  userPoints++;
+  if (guessDiving === 'yes' || guessDiving === 'y') {
+    alert('Pololei! That\'s correct in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
+    console.log('Answer is correct. Tallying score variable.');
+    userPoints++;
 
-} else  {
-  alert('Pololei Ole! That\'s incorrect in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
-  console.log('Answer is incorrect! Score remains the same.');
+  } else if(guessDiving === 'no' || guessDiving === 'n'){
+    alert('Pololei Ole! That\'s incorrect in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
+    console.log('Answer is incorrect! Score remains the same.');
+    correctAnswer = true;
+  } else {
+    alert('Your input was not valid. Please type in the correct reponse');
+    console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
+  }
 
 } 
     
 console.log('Current score: ' + userPoints);
 
 // third question using if/else
+correctAnswer = false;
+while (correctAnswer === false) {
       
-var guessPetDog = prompt('Do I have a pet dog?').toLowerCase();
+  var guessPetDog = prompt('Do I have a pet dog?').toLowerCase();
 
-if (guessPetDog === 'yes' || guessPetDog === 'y') {
-  alert('Grrrrrr! That\'s incorrect in Dog! I don\'t have a pet dog, yet.');
-  console.log('Answer is incorrect! Score remains the same.');
+  if (guessPetDog === 'yes' || guessPetDog === 'y') {
+    alert('Grrrrrr! That\'s incorrect in Dog! I don\'t have a pet dog, yet.');
+    console.log('Answer is incorrect! Score remains the same.');
+    correctAnswer = true;
 
+  } else if(guessPetDog === 'no' || guessPetDog === 'n'){
+    alert('WoofWoof! That\'s correct in Dog! I don\'t have a pet dog, yet.');
+    console.log('Answer is correct. Tallying score variable.');
+    userPoints++;
+    
+  } else {
+    alert('Your input was not valid. Please type in the correct reponse');
+    console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
+  }
 
-} else  {
-  alert('WoofWoof! That\'s correct in Dog! I don\'t have a pet dog, yet.');
-  console.log('Answer is correct. Tallying score variable.');
-  userPoints++;
-
-
-}
+} 
+    
+console.log('Current score: ' + userPoints);
       
-console.log('Current score: ' + userPoints)
-
 // fourth question using if/else
 
 var guessCatAllergy = prompt('Am I allergic to cats?').toLowerCase();
