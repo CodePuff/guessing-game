@@ -51,12 +51,14 @@ while (correctAnswer === false) {
   if (guessDiving === 'yes' || guessDiving === 'y') {
     alert('Pololei! That\'s correct in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
     console.log('Answer is correct. Tallying score variable.');
+    correctAnswer = true;
     userPoints++;
 
-  } else if(guessDiving === 'no' || guessDiving === 'n'){
+  } else if(guessDiving === 'no' || guessDiving === 'n') {
     alert('Pololei Ole! That\'s incorrect in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
     console.log('Answer is incorrect! Score remains the same.');
     correctAnswer = true;
+
   } else {
     alert('Your input was not valid. Please type in the correct reponse');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
@@ -77,9 +79,10 @@ while (correctAnswer === false) {
     console.log('Answer is incorrect! Score remains the same.');
     correctAnswer = true;
 
-  } else if(guessPetDog === 'no' || guessPetDog === 'n'){
+  } else if(guessPetDog === 'no' || guessPetDog === 'n') {
     alert('WoofWoof! That\'s correct in Dog! I don\'t have a pet dog, yet.');
     console.log('Answer is correct. Tallying score variable.');
+    correctAnswer = true;
     userPoints++;
     
   } else {
@@ -92,38 +95,53 @@ while (correctAnswer === false) {
 console.log('Current score: ' + userPoints);
       
 // fourth question using if/else
+correctAnswer = false;
+while (correctAnswer === false) {
 
-var guessCatAllergy = prompt('Am I allergic to cats?').toLowerCase();
+  var guessCatAllergy = prompt('Am I allergic to cats?').toLowerCase();
 
-if (guessCatAllergy === 'yes' || guessCatAllergy === 'y') {
-  alert(' HiSs HiSs! That\'s incorrect in Feline. I love Garfield!');
-  console.log('Answer is incorrect! Score remains the same.');
+  if (guessCatAllergy === 'yes' || guessCatAllergy === 'y') {
+    alert(' HiSs HiSs! That\'s incorrect in Feline. I love Garfield!');
+    console.log('Answer is incorrect! Score remains the same.');
+    correctAnswer = true;
 
-} else  {
-  alert('Purrrrrrrrrr! That\'s correct in Feline. I love Garfield!');
-  console.log('Answer is correct. Tallying score variable..');
-  userPoints++;
+  } else if(guessCatAllergy === 'no' || guessCatAllergy === 'n') {
+    alert('Purrrrrrrrrr! That\'s correct in Feline. I love Garfield!');
+    console.log('Answer is correct. Tallying score variable..');
+    correctAnswer = true;
+    userPoints++;
 
+  } else {
+    alert('Your input was not valid. Please type in the correct reponse');
+    console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
+  }
 
 }
         
 console.log('Current score: ' + userPoints);
 
 // fifth question using if/else
+correctAnswer = false;
+while (correctAnswer === false) {
+
+  var guessChickenPox = prompt('Did I get chicken pox twice in one year?').toLowerCase();
+
+  if (guessChickenPox === 'yes' || guessChickenPox === 'y') {
+    alert('Itchy! Itchy! That is correct! I\'ve had chicken pox twice in elementary school. ');
+    console.log('Answer is correct. Tallying score variable.');
+    correctAnswer = true;
+    userPoints++;
 
 
-var guessChickenPox = prompt('Did I get chicken pox twice in one year?').toLowerCase();
+  } else if(guessChickenPox === 'no' || guessChickenPox === 'n') {
+    alert('Pucock! That is incorrect in Chicken! I\'ve had chicken pox twice in elementary school.');
+    console.log('Answer is incorrect! Score remains the same.');
+    correctAnswer = true;
 
-if (guessChickenPox === 'yes' || guessChickenPox === 'y') {
-  alert('Itchy! Itchy! That is correct! I\'ve had chicken pox twice in elementary school. ');
-  console.log('Answer is correct. Tallying score variable.');
-  userPoints++;
-
-
-} else  {
-  alert('Pucock! That is incorrect in Chicken! I\'ve had chicken pox twice in elementary school.');
-  console.log('Answer is incorrect! Score remains the same.');
-
+  } else {
+    alert('Your input was not valid. Please type in the correct reponse');
+    console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
+  }
 
 }
 
