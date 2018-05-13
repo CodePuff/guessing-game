@@ -2,6 +2,8 @@
 # guessing-game
 Code Fellows 201n11 About Me Lab 2.  
 
+-- Pair programming work: Harry Hayden - Navigator | Shalon Baker | Driver
+
 ## Purpose
 
 - The assignment will be to create an "About Me" HTML Project using Javascript and CSS.
