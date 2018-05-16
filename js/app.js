@@ -150,29 +150,29 @@ correctAnswer = false;
 for (var i = 0; i < 4 && (correctAnswer === false); i++) {
 
   var guessTotalCousins = prompt('How many of my cousins do you think live in Washington state currently? (please enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining for this question.');
-} while (isNaN(guessTotalCousins))
-  guessTotalCousins = prompt ('Invalid input. We will give you a chance to input an integer before docking attempts. How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining for this question.');
+  while (isNaN(guessTotalCousins))
+    guessTotalCousins = prompt ('Invalid input. We will give you a chance to input an integer before docking attempts. How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining for this question.');
 
-var intGuessTotalCousins = parseInt(guessTotalCousins);
-console.log('User input: ' + guessTotalCousins);
+  var intGuessTotalCousins = parseInt(guessTotalCousins);
+  console.log('User input: ' + guessTotalCousins);
 
-if (intGuessTotalCousins < 0) {
-  alert('Sorry, but that\'s not how the world works. You can\'t have less than 0 cousins!');
-  console.log('Answer is incorrect. Loop will continue.');
+  if (intGuessTotalCousins < 0) {
+    alert('Sorry, but that\'s not how the world works. You can\'t have less than 0 cousins!');
+    console.log('Answer is incorrect. Loop will continue.');
 
-} else if (intGuessTotalCousins === 1) {
-  alert('That is incorrect! Your guess is too low.');
-  console.log('Answer is incorrect. Loop will continue.');
+  } else if (intGuessTotalCousins === 1) {
+    alert('That is incorrect! Your guess is too low.');
+    console.log('Answer is incorrect. Loop will continue.');
 
-} else if (intGuessTotalCousins > 2) {
-  alert('That is incorrect! Your guess is too high.');
-  console.log('Answer is incorrect. Loop will continue.');
+  } else if (intGuessTotalCousins > 2) {
+    alert('That is incorrect! Your guess is too high.');
+    console.log('Answer is incorrect. Loop will continue.');
 
-} else if (intGuessTotalCousins === 2) {
-  alert('That is correct! I have 2 (two) cousins living in Washington.');
-  console.log('Answer is correct. Incrementing score variable and exit loop.');
-  correctAnswer = true;
-
+  } else if (intGuessTotalCousins === 2) {
+    alert('That is correct! I have 2 (two) cousins living in Washington.');
+    console.log('Answer is correct. Incrementing score variable and exit loop.');
+    correctAnswer = true;
+  }
   console.log(correctAnswer);
   userPoints++;
 
@@ -183,21 +183,23 @@ console.log('Current score: ' + userPoints);
 // added seventh question using if/else/while loop and array
 
 correctAnswer = false;
-var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii'];
+var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii'].toLowerCase();
 
 //creating a new array and then turning each element to lower case.  The lower case names are then pushed into the array.
 
-var lowerCaseVisitedStates = {};
+// var lowerCaseVisitedStates = {};
 for (i = 0; i < visitedStates.length; i++) {
-  lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
+  // lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
 }
-
-console.log(lowerCaseVisitedStates);
+console.log(visitedStates);
+// console.log(lowerCaseVisitedStates);
 for (i = 0; i < 6 && (correctAnswer === false); i++) {
-  var guessVisitedState = prompt('Can you guess a state that I have lived in besides Washington and Alaska? You have ' + (6 - i) + ' attempt(s) remaining for this question.');
-  var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
+  var guessVisitedState = prompt('Can you guess a state that I have visited besides Washington? You have ' + (6 - i) + ' attempt(s) remaining for this question.');
+  // var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
   console.log(lowerCaseGuessVisitedState);
-  var guessInt = lowerCaseVisitedStates.indexOf(lowerCaseGuessVisitedState);
+  var guessInt = visitedStates.indexOf();
+
+  // var guessInt = lowerCaseVisitedStates.indexOf(lowerCaseGuessVisitedState);
   console.log(guessInt);
   if (guessInt === -1) {
     alert('That was incorrect. Please try again!"');
