@@ -35,7 +35,7 @@ while (correctAnswer===false){
     console.log('Answer is incorrect! Your score remains the same.');
     correctAnswer = true;
   }else{
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 }
@@ -60,7 +60,7 @@ while (correctAnswer === false) {
     correctAnswer = true;
 
   } else {
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 
@@ -85,7 +85,7 @@ while (correctAnswer === false) {
     userPoints++;
 
   } else {
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 
@@ -110,7 +110,7 @@ while (correctAnswer === false) {
     userPoints++;
 
   } else {
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 
@@ -136,7 +136,7 @@ while (correctAnswer === false) {
     correctAnswer = true;
 
   } else {
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 
@@ -183,24 +183,33 @@ console.log('Current score: ' + userPoints);
 // added seventh question using if/else/while loop and array
 
 correctAnswer = false;
-var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii'].toLowerCase();
+var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii']; var guessInt = visitedStates.indexOf();
+
+// .toLowerCase();
 
 //creating a new array and then turning each element to lower case.  The lower case names are then pushed into the array.
 
-// var lowerCaseVisitedStates = {};
+// // var lowerCaseVisitedStates = {};
+// for (i = 0; i < visitedStates.length; i++) {
+//   // lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
+// }
+// console.log(visitedStates);
+// // console.log(lowerCaseVisitedStates);
+// for (i = 0; i < 6 && (correctAnswer === false); i++) {
+  var guessVisitedStates = prompt('Can you guess a state that I have visited besides Washington? You will have 6 attempts to answer this question.').toLowerCase();
 for (i = 0; i < visitedStates.length; i++) {
-  // lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
-}
-console.log(visitedStates);
-// console.log(lowerCaseVisitedStates);
-for (i = 0; i < 6 && (correctAnswer === false); i++) {
-  var guessVisitedState = prompt('Can you guess a state that I have visited besides Washington? You have ' + (6 - i) + ' attempt(s) remaining for this question.');
+  if(guessVisitedStates === visitedStates[i]){
+    correctAnswer = true;
+  }
   // var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
-  console.log(lowerCaseGuessVisitedState);
-  var guessInt = visitedStates.indexOf();
+  // console.log
+
+  // (lowerCaseGuessVisitedState);
+  // var guessInt = visitedStates.indexOf();
 
   // var guessInt = lowerCaseVisitedStates.indexOf(lowerCaseGuessVisitedState);
   console.log(guessInt);
+
   if (guessInt === -1) {
     alert('That was incorrect. Please try again!"');
   }
