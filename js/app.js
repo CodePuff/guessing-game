@@ -155,7 +155,7 @@ for (var i = 0; i < 4 && (correctAnswer === false); i++) {
   var guessTotalCousins = prompt('How many of my cousins do you think live in Washington state currently? (please enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining for this question.');
   
   while (isNaN(guessTotalCousins))
-    guessTotalCousins = prompt ('Invalid input. We will give you a chance to input an integer before docking attempts. How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining for this question.');
+    guessTotalCousins = prompt ('That\'s not a number! You get a chance to input an integer number before docking attempts. How many of my cousins do you think live in Washington state currently (enter an integer number only: i.e. 0, 100) You have ' + (4 - i) + ' attempt(s) remaining for this question.');
 }
 var intGuessTotalCousins = parseInt(guessTotalCousins);
 console.log('User input: ' + guessTotalCousins);
@@ -186,25 +186,29 @@ console.log('Current score: ' + userPoints);
 // added seventh question using if/else/while loop and array
 
 correctAnswer = false;
-var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida", 'Hawaii'];
+var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii'].toLowerCase();
 
 //creating a new array and then turning each element to lower case.  The lower case names are then pushed into the array.  
 
-var lowerCaseVisitedStates = {};
-  for (i = 0; i < visitedStates.length; i++) {
-  lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
-}
+// var lowerCaseVisitedStates = {};
+//   for (i = 0; i < visitedStates.length; i++) {
+//   lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
+// }
 
-  console.log(lowerCaseVisitedStates);
-  for (var i = 0; i < 6 && (correctAnswer === false); i++) {
+// console.log(lowerCaseVisitedStates);
+for (var i = 0; i < 6 && (correctAnswer === false); i++) {
   var guessVisitedState = prompt('Can you guess a state that I have lived in besides Washington and Alaska? You have ' + (6 - i) + ' attempt(s) remaining for this question.');
-  var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
-  console.log(lowerCaseGuessVisitedState);
-  var guessInt = lowerCaseVisitedStates.indexOf(lowerCaseGuessVisitedState);
+
+  // var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
+  // console.log(lowerCaseGuessVisitedState);
+  var guessInt = visitedStates.indexOf(guessVisitedState);
+
   console.log(guessInt);
+
   if (guessInt === -1) {
     alert('That was incorrect. Please try again!"');
   }
+
   else if (guessInt > -1) {
     alert('That was correct! Possible answers were the following: ' + visitedStates.join(', ') + '.');
     correctAnswer = true;
@@ -212,10 +216,6 @@ var lowerCaseVisitedStates = {};
   }
 }
 console.log(userPoints);
-
-
-
-
 
 // Tallying total
 alert('Thank you for visiting my page! Your final score: ' + userPoints + ' See you later!');
