@@ -25,7 +25,7 @@ while (correctAnswer===false){
   var guessHometown = prompt('Was I born in Germany?').toLowerCase();
 
   if (guessHometown === 'no' || guessHometown === 'n') {
-    alert('Richtig! That\'s correct in German! I was born in Seoul, Korea.');
+    alert('Richtig! That\'s correct in German! I was born in Seoul, Korea.  Got a point on the board!');
     console.log('Answer is correct. Tallying score variable.');
     correctAnswer = true;
     userPoints++;
@@ -49,7 +49,7 @@ while (correctAnswer === false) {
   var guessDiving = prompt('Did I go snuba diving?').toLowerCase();
 
   if (guessDiving === 'yes' || guessDiving === 'y') {
-    alert('Pololei! That\'s correct in Hawaiian! I went snuba diving off Molikini Island, Hawaii! Score a point on the board for you!');
+    alert('Pololei! That\'s correct in Hawaiian! I went snuba diving off Molikini Island, Hawaii!');
     console.log('Answer is correct. Tallying score variable.');
     correctAnswer = true;
     userPoints++;
@@ -185,7 +185,9 @@ console.log('Current score: ' + userPoints);
 // added seventh question using if/else/while loop and array
 
 
-var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii']; var guessInt = visitedStates.indexOf();
+var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii']; 
+var guessInt = 0;
+// var guessInt = visitedStates.indexOf();
 // correctAnswer = false;
 
 // .toLowerCase();
@@ -201,11 +203,12 @@ var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Caroli
 // for (i = 0; i < 6 && (correctAnswer === false); i++) {
 while (guessInt < 7) {
   var guessVisitedStates = prompt('Can you guess a state that I have visited besides Washington? You will have 6 attempts to answer this question.').toLowerCase();
-for (i = 0; i < visitedStates.length; i++) {
-  if(guessVisitedStates === visitedStates[i]){
-    correctAnswer = true;
+
+  for (i = 0; i < visitedStates.length; i++) {
+    if(guessVisitedStates === visitedStates[i]){
+      correctAnswer = true;
+    }
   }
-}
   // var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
   // console.log
 
@@ -218,8 +221,8 @@ for (i = 0; i < visitedStates.length; i++) {
   if (!correctAnswer) {
     alert('That was incorrect. Please try again!');
     guessInt++;
-  }
-  else {
+    
+  } else {
     alert('That was correct! Possible answers were the following: ' + visitedStates.join(', ') + '. Who do you work for? The FBI?');
     // correctAnswer = true;
     userPoints++;
