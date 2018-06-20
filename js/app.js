@@ -17,9 +17,10 @@ console.log ('Hello World!');
 var user = prompt ('What is your name?');
 console.log ('The user\'s name is ' + user);
 
-//first question using if/else adding while loop
+//first question using if/else adding while loop - converting to functions()
 
 var correctAnswer=false;
+function firstQustion() {
 while (correctAnswer===false){
 
   var guessHometown = prompt('Was I born in Germany?').toLowerCase();
@@ -40,7 +41,8 @@ while (correctAnswer===false){
   }
 }
 console.log('Current score: ' + userPoints);
-
+}
+firstQustion();
 
 // second question using if else adding while loop
 correctAnswer = false;
