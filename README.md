@@ -80,6 +80,11 @@ User stories typically take the form of, "As X, I want Y, so that Z" but do not 
   -added function() 
   -Pair programming work: Harry Hayden - Navigator | Shalon Baker | Driver
 
+-Version 1.2.1
+  -Lab2-guessing-game branch errors with master. Switch to Lab2-guessinggame-day3
+  -Need to convert to functions in new branch label lab2-guessinggame-day4
+  -Need to finish debugging question 7 and finish html/css markup for deployment.  
+
 ### Tech/Framework 
 
 - Visual Studio Code (Version 1.23.0) 
