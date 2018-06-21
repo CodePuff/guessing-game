@@ -25,7 +25,7 @@ while (correctAnswer===false){
   var guessHometown = prompt('Was I born in Germany?').toLowerCase();
 
   if (guessHometown === 'no' || guessHometown === 'n') {
-    alert('Richtig! That\'s correct in German! I was born in Seoul, Korea.');
+    alert('Richtig! That\'s correct in German! I was born in Seoul, Korea.  Got a point on the board!');
     console.log('Answer is correct. Tallying score variable.');
     correctAnswer = true;
     userPoints++;
@@ -35,7 +35,7 @@ while (correctAnswer===false){
     console.log('Answer is incorrect! Your score remains the same.');
     correctAnswer = true;
   }else{
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 }
@@ -60,7 +60,7 @@ while (correctAnswer === false) {
     correctAnswer = true;
 
   } else {
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 
@@ -79,13 +79,13 @@ while (correctAnswer === false) {
     correctAnswer = true;
 
   } else if(guessPetDog === 'no' || guessPetDog === 'n') {
-    alert('WoofWoof! That\'s correct in Dog! I don\'t have a pet dog, yet.');
+    alert('WoofWoof! That\'s correct in Dog! I don\'t have a pet dog, yet. You\'re getting pretty darn good at these guesses!');
     console.log('Answer is correct. Tallying score variable.');
     correctAnswer = true;
     userPoints++;
 
   } else {
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 
@@ -104,13 +104,13 @@ while (correctAnswer === false) {
     correctAnswer = true;
 
   } else if(guessCatAllergy === 'no' || guessCatAllergy === 'n') {
-    alert('Purrrrrrrrrr! That\'s correct in Feline. I love Garfield!');
+    alert('Purrrrrrrrrr! That\'s correct in Feline. I love Garfield! You\'re not reading my mind? Or are you?');
     console.log('Answer is correct. Tallying score variable..');
     correctAnswer = true;
     userPoints++;
 
   } else {
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 
@@ -124,7 +124,7 @@ while (correctAnswer === false) {
   var guessChickenPox = prompt('Did I get chicken pox twice in one year?').toLowerCase();
 
   if (guessChickenPox === 'yes' || guessChickenPox === 'y') {
-    alert('Itchy! Itchy! That is correct! I\'ve had chicken pox twice in elementary school. ');
+    alert('Itchy! Itchy! That is correct! I\'ve had chicken pox twice in elementary school. Did my mom give away the answer?');
     console.log('Answer is correct. Tallying score variable.');
     correctAnswer = true;
     userPoints++;
@@ -136,7 +136,7 @@ while (correctAnswer === false) {
     correctAnswer = true;
 
   } else {
-    alert('Your input was not valid. Please type in the correct reponse');
+    alert('Say what? Your input was not valid. Please type in the correct reponse - either a yes/no or y/n.');
     console.log('correctAnswer remains false; therefore, the while loop will repeat the question');
   }
 
@@ -169,12 +169,14 @@ for (var i = 0; i < 4 && (correctAnswer === false); i++) {
     console.log('Answer is incorrect. Loop will continue.');
 
   } else if (intGuessTotalCousins === 2) {
-    alert('That is correct! I have 2 (two) cousins living in Washington.');
+    alert('That is correct! I have 2 (two) cousins living in Washington.  I\'m concerned you may know just a little too much about me now.');
     console.log('Answer is correct. Incrementing score variable and exit loop.');
     correctAnswer = true;
+    userPoints++;
+
   }
   console.log(correctAnswer);
-  userPoints++;
+  // userPoints++;
 
 }
 
@@ -182,36 +184,53 @@ console.log('Current score: ' + userPoints);
 
 // added seventh question using if/else/while loop and array
 
-correctAnswer = false;
-var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii'].toLowerCase();
+
+var visitedStates = ['Oregon', 'California', 'Nevada', 'New York', 'South Carolina', 'Florida', 'Hawaii']; 
+var guessInt = 0;
+// var guessInt = visitedStates.indexOf();
+// correctAnswer = false;
+
+// .toLowerCase();
 
 //creating a new array and then turning each element to lower case.  The lower case names are then pushed into the array.
 
-// var lowerCaseVisitedStates = {};
-for (i = 0; i < visitedStates.length; i++) {
-  // lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
-}
-console.log(visitedStates);
-// console.log(lowerCaseVisitedStates);
-for (i = 0; i < 6 && (correctAnswer === false); i++) {
-  var guessVisitedState = prompt('Can you guess a state that I have visited besides Washington? You have ' + (6 - i) + ' attempt(s) remaining for this question.');
+// // var lowerCaseVisitedStates = {};
+// for (i = 0; i < visitedStates.length; i++) {
+//   // lowerCaseVisitedStates.push(visitedStates[i].toLowerCase());
+// }
+// console.log(visitedStates);
+// // console.log(lowerCaseVisitedStates);
+// for (i = 0; i < 6 && (correctAnswer === false); i++) {
+while (guessInt < 7) {
+  var guessVisitedStates = prompt('Can you guess a state that I have visited besides Washington? You will have 6 attempts to answer this question.').toLowerCase();
+
+  for (i = 0; i < visitedStates.length; i++) {
+    if(guessVisitedStates === visitedStates[i]){
+      correctAnswer = true;
+    }
+  }
   // var lowerCaseGuessVisitedState = guessVisitedState.toLowerCase();
-  console.log(lowerCaseGuessVisitedState);
-  var guessInt = visitedStates.indexOf();
+  // console.log
+
+  // (lowerCaseGuessVisitedState);
+  // var guessInt = visitedStates.indexOf();
 
   // var guessInt = lowerCaseVisitedStates.indexOf(lowerCaseGuessVisitedState);
-  console.log(guessInt);
-  if (guessInt === -1) {
-    alert('That was incorrect. Please try again!"');
-  }
-  else if (guessInt > -1) {
-    alert('That was correct! Possible answers were the following: ' + visitedStates.join(', ') + '.');
-    correctAnswer = true;
+  // console.log(guessInt);
+
+  if (!correctAnswer) {
+    alert('That was incorrect. Please try again!');
+    guessInt++;
+    
+  } else {
+    alert('That was correct! Possible answers were the following: ' + visitedStates.join(', ') + '. Who do you work for? The FBI?');
+    // correctAnswer = true;
     userPoints++;
+    guessInt+7;
   }
 }
 console.log(userPoints);
 
 // Tallying total
-alert('Thank you for visiting my page! Your final score: ' + userPoints + ' See you later!');
-console.log('Player earned a final score of ' + userPoints + ' out of 5.' + 'This concludes the JavaScript portion.');
+alert('Thank you for visiting my page! Your final score: ' + userPoints + ' out of 7.  See you later!');
+console.log('Player earned a final score of ' + userPoints + ' out of 7.' + 'This concludes the guessing game.');
